@@ -1,0 +1,29 @@
+package com.example.demo;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.demo.model.Customer;
+import com.example.demo.service.HotelService;
+
+@SpringBootApplication
+public class Hotel3Application implements CommandLineRunner {
+
+	@Autowired
+	private HotelService hotelService;
+	public static void main(String[] args) {
+		SpringApplication.run(Hotel3Application.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Customer c1 = new Customer(313930703,"yuval","elmakaies",new Date(29/11/95));
+		
+		hotelService.addCustomer(c1);
+	}
+
+}

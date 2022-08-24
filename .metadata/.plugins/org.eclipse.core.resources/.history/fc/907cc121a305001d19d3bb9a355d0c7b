@@ -1,0 +1,20 @@
+package com.example.demo.models;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "customer")
+public class Customer {
+	
+    @Id
+    @Column
+    private long id;
+    @Column
+    private String firstName;
+    @Column
+    private String lastName;
+    
+    private 
+    
+
+}

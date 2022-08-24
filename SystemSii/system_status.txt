@@ -1,0 +1,4 @@
+http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf , מערכת מתקני משחקים 
+http://importtv16:9080/ImportSystemWebLayer/main.do , מערכת מיטב
+http://meitavprod:9120/ProductFileWEB/faces/newgui/jsp/login.jsp , מערכת תיק מוצר
+http://std.org.il/checklist/main/ordersystem.html , מערכת צ'יק ליסט

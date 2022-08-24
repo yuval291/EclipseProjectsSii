@@ -1,0 +1,63 @@
+package com.example.demo;
+
+import java.util.List;
+
+import javax.persistence.*;
+
+
+@Entity
+@Table(name="class")
+public class Class {
+	
+	@Id
+	@Column
+	private int classId;
+	@Column
+	private String className;
+	
+	@OneToMany(mappedBy = "classId")
+	List<Student> students;
+
+	public Class(int class_id, String className) {
+		super();
+		this.classId = class_id;
+		this.className = className;
+	}
+	
+	@Override
+	public String toString() {
+		return "Class [class_id=" + classId + ", className=" + className + "]";
+	}
+
+	public Class() {
+		super();
+	}
+
+	public int getClass_id() {
+		return classId;
+	}
+
+	public void setClass_id(int class_id) {
+		this.classId = class_id;
+	}
+
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+
+	public List<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+
+	
+	
+
+}

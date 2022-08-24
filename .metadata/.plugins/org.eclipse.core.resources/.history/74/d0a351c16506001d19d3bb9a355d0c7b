@@ -1,0 +1,55 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Account;
+import com.example.demo.models.Customer;
+import com.example.demo.repository.AccountRepository;
+import com.example.demo.repository.CustomerRepository;
+
+@Service
+public class AccountService {
+
+	@Autowired
+	private AccountRepository accountRepo;
+
+	@Autowired
+	private CustomerRepository customerRepo;
+
+	@Transactional
+	public Customer openAccount(Customer newCustomer) throws Exception {
+		Account account = new Account(363655, 8000);
+//		accountRepo.save(account);
+
+		Customer c1 = customerRepo.findById(newCustomer.getId()).get();
+		
+		List<Customer> customers = new ArrayList<>();
+		customers.add(c1);
+
+		account.setCustomers(customers);
+		c1.setAccountNumber(account);
+		
+
+		return c1;
+	}
+
+	@Transactional
+	public void CreateMinusLimit(long customrId, double limit) {
+		Customer a = customerRepo.findById(customrId).get();
+
+		Account account = a.getAccountNumber();
+
+		account.setMinusLimit(limit);
+
+	}
+
+}

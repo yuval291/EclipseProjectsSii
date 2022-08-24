@@ -1,0 +1,37 @@
+package com.example.demo;
+
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.Calendar;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class EntriesAspect {
+	
+	@Before("@annotation(Entries)||@target(Entries)")
+	public void writeStartingFunctionToConsole(JoinPoint jp)
+	{
+		MethodSignature functionSignature = (MethodSignature) jp.getSignature();
+		Method method = functionSignature.getMethod();
+		if(method!=null)
+		{
+			Entries permissionAnnotation = method.getAnnotation(Entries.class);
+			
+			int requiredRole = permissionAnnotation.entries();
+			int e=4;
+			
+			if(requiredRole == 4)
+			{
+				
+			}
+			
+		}
+	}
+
+}

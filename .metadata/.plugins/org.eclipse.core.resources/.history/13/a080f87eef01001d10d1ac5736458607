@@ -1,0 +1,35 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.demo.model.Car;
+import com.example.demo.service.CarService;
+
+
+@SpringBootApplication
+public class Yad2Application implements CommandLineRunner{
+	
+	@Autowired
+	private CarService carService;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Yad2Application.class, args);
+	}
+	
+	@Override
+	public void run(String... args) throws Exception {
+		
+		Car c1 = new Car("fg","ff", 80000, 2007, 4, 45000);
+		Car c2 = new Car("gd","ff", 80000, 2007, 4, 45000);
+		Car c3 = new Car("kk","ff", 80000, 2007, 4, 45000);
+		Car c4 = new Car("ll","ff", 80000, 2007, 4, 45000);
+		
+		carService.addCars(c1,c2,c3,c4);
+		
+		carService.deleteCars(c2,c4);
+	}
+
+}

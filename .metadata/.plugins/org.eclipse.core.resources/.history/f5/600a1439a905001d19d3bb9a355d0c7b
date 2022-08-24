@@ -1,0 +1,27 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Account;
+import com.example.demo.models.Customer;
+import com.example.demo.repository.AccountRepository;
+import com.example.demo.repository.CustomerRepository;
+
+@Service
+public class AccountService {
+
+	@Autowired
+	private AccountRepository accountRepo;
+	
+	@Autowired
+	private CustomerRepository customerRepo;
+	
+	public void openAccount(Customer newCustomer) {
+		Account account = new Account("363655",8000,2.3);
+		newCustomer.setAccountId(account);
+		
+		customerRepo.save(newCustomer);
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.example.demo;
+
+public class Test {
+
+	public void foo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void doo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

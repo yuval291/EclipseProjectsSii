@@ -1,0 +1,13 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AccountService {
+
+	public void openAccount() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Sun May 22 11:21:28 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Sun May 22 11:21:30 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Sun May 22 11:31:40 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Sun May 22 11:31:42 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+

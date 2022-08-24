@@ -1,0 +1,70 @@
+package com.example.demo.models;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "account")
+public class Account {
+	
+    @Id
+    @Column
+    private String accountNumber;
+    @Column    
+    private double currentBalance;
+    @Column
+    private double foreignCurrency;
+    
+    @OneToMany(mappedBy = "accountNumber")
+    List<Customer> customers;
+
+	public Account() {
+		super();
+	}
+
+	public Account(String accountNumber, double currentBalance, double foreignCurrency) {
+		super();
+		this.accountNumber = accountNumber;
+		this.currentBalance = currentBalance;
+		this.foreignCurrency = foreignCurrency;
+	}
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public double getCurrentBalance() {
+		return currentBalance;
+	}
+
+	public void setCurrentBalance(double currentBalance) {
+		this.currentBalance = currentBalance;
+	}
+
+	public double getOwnerName() {
+		return foreignCurrency;
+	}
+
+	public void setOwnerName(double foreignCurrency) {
+		this.foreignCurrency = foreignCurrency;
+	}
+
+	public List<Customer> getCustomers() {
+		return customers;
+	}
+
+	public void setCustomers(List<Customer> customers) {
+		this.customers = customers;
+	}
+	
+	
+}

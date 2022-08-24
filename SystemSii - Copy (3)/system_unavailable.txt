@@ -1,0 +1,360 @@
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Tue Jun 07 13:30:16 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Tue Jun 07 13:30:16 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Tue Jun 07 13:30:18 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Tue Jun 07 13:30:52 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Tue Jun 07 13:30:52 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Tue Jun 07 13:30:54 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 07:44:26 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 07:44:27 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 07:44:29 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 12:59:20 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 12:59:20 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 12:59:22 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:04:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:04:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:04:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:09:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:09:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:09:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:14:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:14:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:14:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:19:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:19:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:19:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:24:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:24:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:24:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:29:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:29:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:29:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:34:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:34:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:34:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:39:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:39:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:39:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:44:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:44:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:44:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:49:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:49:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:49:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:54:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:54:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:54:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 13:59:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 13:59:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 13:59:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:04:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:04:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:04:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:09:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:09:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:09:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:14:19 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:14:19 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:14:21 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:32:47 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:32:47 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:32:49 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:37:46 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:37:46 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:37:48 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:42:46 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:42:46 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:42:48 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:47:46 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:47:46 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:47:48 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:52:46 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:52:46 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:52:48 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 14:57:46 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 14:57:46 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 14:57:48 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 15:02:46 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 15:02:46 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 15:02:48 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Wed Jun 08 15:07:46 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Wed Jun 08 15:07:46 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Wed Jun 08 15:07:48 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Sun Jun 12 09:36:57 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Sun Jun 12 09:36:57 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Sun Jun 12 09:36:59 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Sun Jun 12 11:07:24 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Sun Jun 12 11:07:24 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Sun Jun 12 11:07:26 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+
+URL System: http://import:9081/ImportMessagesExceptionsHandlerWeb/#/login
+DATE: Sun Jun 12 11:12:23 IDT 2022
+SYSTEM: הודעות
+
+URL System: http://meitavprod:9095/PlayGroundSiteWEB/view/login.jsf
+DATE: Sun Jun 12 11:12:23 IDT 2022
+SYSTEM: מערכת מתקני משחקים 
+
+URL System: http://std.org.il/checklist/main/ordersystem.html
+DATE: Sun Jun 12 11:12:25 IDT 2022
+SYSTEM: מערכת צ'יק ליסט
+

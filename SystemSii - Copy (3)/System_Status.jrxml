@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="System_Status" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8567bd5c-029e-4516-a593-935b48a63318">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<field name="url" class="java.lang.String"/>
+	<field name="responseCode" class="java.lang.Integer"/>
+	<field name="date" class="java.util.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" backcolor="#8FE0E3" uuid="d10f4e8d-6528-490d-b314-d9755cb0e935"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="130" y="10" width="340" height="68" uuid="f6d939f3-7005-4da8-87fd-7dc0396b83d0"/>
+				<textElement textAlignment="Center">
+					<font size="40" isBold="true"/>
+				</textElement>
+				<text><![CDATA[סטאטוס מערכות]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="10" y="10" width="110" height="19" uuid="62cff0b4-cd8d-4d36-90ca-24b7ecf278fa"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="0" width="94" height="30" uuid="269a6536-031c-46db-b52b-7c831e42f1e8"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#8FE0E3"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font fontName="Courier New" size="12" isItalic="false" isUnderline="false" pdfFontName="TIMESBD.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["yuval"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="280" height="30" uuid="2496845b-a30c-4264-b899-a105b04047ee"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#8FE0E3"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[לינק]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="80" height="30" uuid="61e35dc9-5817-4cea-bcfd-5376c4f9d1bd"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#8FE0E3"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[זמינות]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="ff071730-593c-44e5-814f-21b3a8a902f3"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#8FE0E3"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[תאריך]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="0" width="96" height="30" uuid="b8ca8377-b0bc-420c-bb64-649009944f33"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#8FE0E3"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="280" height="30" uuid="fb3373c0-1fa1-4c94-96cc-a645a3a81230"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#8FE0E3"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{url}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="80" height="30" uuid="3c14b2d9-c7fa-40bb-854a-41a0c8f648f9"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#8FE0E3"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{responseCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="28fc315c-d277-494f-a8f9-47f8423d6de9"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#8FE0E3"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

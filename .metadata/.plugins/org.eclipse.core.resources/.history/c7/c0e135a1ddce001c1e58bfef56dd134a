@@ -1,0 +1,91 @@
+package com.example.project.schedular;
+
+import javax.sql.DataSource;
+
+import org.quartz.JobBuilder;
+import org.quartz.JobDetail;
+import org.quartz.Scheduler;
+import org.quartz.SchedulerException;
+import org.quartz.SimpleScheduleBuilder;
+import org.quartz.Trigger;
+import org.quartz.TriggerBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.scheduling.quartz.SchedulerFactoryBean;
+import org.springframework.scheduling.quartz.SpringBeanJobFactory;
+
+@SpringBootApplication
+public class Schedular {
+	
+//	@Autowired 
+//	private  JobDetail job;
+//
+//	private  Trigger trigger;
+//	
+//	private  Scheduler scheduler;
+	public static void main(String[] args) {
+		SpringApplication.run(Schedular.class, args);
+		try {
+//			JobDetail job = jobDetail();
+//            Trigger trigger = trigger(job);
+//            SchedulerFactoryBean schedulerFactory = new SchedulerFactoryBean();
+			
+//            scheduler(trigger,job,schedulerFactory);
+            
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Bean
+	public  JobDetail jobDetail() {
+	    return JobBuilder.newJob(SystemJob.class).withIdentity("systemjob", "group").build();
+	}
+	
+	@Bean
+	public  Trigger trigger(JobDetail job) {
+	    return  TriggerBuilder.newTrigger().withIdentity("simpleTrigger", "group")
+                .withSchedule(SimpleScheduleBuilder.repeatMinutelyForever()).build();
+	}
+	
+//	@Bean
+//	public static Scheduler scheduler(Trigger trigger, JobDetail job) 
+//	  throws SchedulerException {
+//		StdSchedulerFactory schedulerFactory=new StdSchedulerFactory();
+//		schedulerFactory.
+//        Scheduler scheduler = schedulerFactory.getScheduler(); 
+//        scheduler.start(); 
+//        scheduler.scheduleJob(job, trigger);
+//	    return scheduler;
+//	}
+	@Bean
+	public Scheduler scheduler(Trigger trigger, JobDetail job, SchedulerFactoryBean factory) 
+	  throws SchedulerException {
+	    Scheduler scheduler = factory.getScheduler();
+	    scheduler.scheduleJob(job, trigger);
+	    scheduler.start();
+	    return scheduler;
+	}
+	@Bean
+	public SchedulerFactoryBean scheduler(Trigger trigger, JobDetail job, DataSource quartzDataSource) {
+	    SchedulerFactoryBean schedulerFactory = new SchedulerFactoryBean();
+	    schedulerFactory.setConfigLocation(new ClassPathResource("quartz.properties"));
+
+	    schedulerFactory.setJobFactory(springBeanJobFactory());
+	    schedulerFactory.setJobDetails(job);
+	    schedulerFactory.setTriggers(trigger);
+	    schedulerFactory.setDataSource(quartzDataSource);
+	    return schedulerFactory;
+	}
+	@Bean
+	public SpringBeanJobFactory springBeanJobFactory() {
+	    AutoWiringSpringBeanJobFactory jobFactory = new AutoWiringSpringBeanJobFactory();
+	    jobFactory.setApplicationContext(applicationContext);
+	    return jobFactory;
+	}
+	
+
+}

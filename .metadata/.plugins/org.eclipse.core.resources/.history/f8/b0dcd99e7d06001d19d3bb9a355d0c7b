@@ -1,0 +1,34 @@
+package com.example.demo.models;
+
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "account")
+public class Account {
+
+	@Id
+	@Column
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long accountNumber;
+	@Column
+	private double currentBalance;
+	@Column
+	private double minusLimit;
+
+	@OneToMany(mappedBy = "account", orphanRemoval = true)
+	@JoinTable(name = "CUTOMER_ACCOUNT", 
+	joinColumns = @JoinColumn(name = "CUSTOMER_ID", referencedColumnName = "customerId"), 
+	inverseJoinColumns = @JoinColumn(name = "ACCOUNT_ID", referencedColumnName = "accountNumber"))
+	Set<Customer> customers;
+}

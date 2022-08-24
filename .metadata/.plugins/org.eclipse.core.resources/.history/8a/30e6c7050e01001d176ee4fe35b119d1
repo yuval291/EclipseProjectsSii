@@ -1,0 +1,20 @@
+package com.example.demo;
+
+import com.iis.Component;
+
+@Component
+public class Test implements Runnable{
+
+	@Override
+	public void run() {
+		try {
+			Thread.sleep(3000);
+			System.out.println("Done");
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+
+}

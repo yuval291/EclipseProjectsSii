@@ -1,0 +1,30 @@
+package com.example.demo;
+
+import java.lang.reflect.Method;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class MyAspect {
+
+	@Around("@annotation(MyAnnotation))")
+	public Object func(ProceedingJoinPoint jp) throws Throwable{
+		
+		MethodSignature signature = (MethodSignature) jp.getSignature();
+		Method method = signature.getMethod();
+		
+		if (method != null) {
+			MyAnnotation entriesAnnotation = method.getAnnotation(MyAnnotation.class);
+
+			if (entriesAnnotation.insert()) {
+				return jp.proceed();
+			}
+		}
+		throw new Exception("Error entering");
+	}
+}

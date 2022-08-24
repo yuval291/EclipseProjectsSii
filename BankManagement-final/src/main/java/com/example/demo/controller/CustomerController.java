@@ -1,0 +1,67 @@
+package com.example.demo.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.models.Customer;
+import com.example.demo.service.CustomerService;
+
+@RestController
+@RequestMapping("customer")
+public class CustomerController {
+	
+	@Autowired
+	CustomerService customerService;
+
+	private static final String NO_ACCOUNT_FOUND = "Unable to find an account matching this sort code and account number";
+
+	@PostMapping(value = "/add-customer")
+	public ResponseEntity<Customer> AddingAccount(@RequestBody Customer newCustomer) {
+		try {
+			Customer c = customerService.addCustomer(newCustomer);
+			return new ResponseEntity<Customer>(c, HttpStatus.OK);
+			
+		} catch (Exception e) {
+			return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
+		}
+	}
+
+	@GetMapping("/all-customer")
+	public List<Customer> getAllCustomer() {
+		List<Customer> list = customerService.findAllCustomer();
+		return list;
+	}
+
+	@DeleteMapping(value = "/delete-customer")
+	public ResponseEntity<?> DeleteCustomerById(@RequestBody Long customerId) {
+		Optional<Customer> a = customerService.findById(customerId);
+
+		if (a == null) {
+			return new ResponseEntity<>(NO_ACCOUNT_FOUND, HttpStatus.NO_CONTENT);
+		}
+		customerService.deleteById(customerId);
+		return new ResponseEntity<>(a, HttpStatus.OK);
+	}
+
+	@PostMapping(value = "/Update")
+	public ResponseEntity<String> UpdateCustomer(@RequestBody Customer updateCustomer) {
+		Optional<Customer> a = customerService.findById(updateCustomer.getCustomerId());
+
+		if (a == null) {
+			return new ResponseEntity<>(NO_ACCOUNT_FOUND, HttpStatus.NO_CONTENT);
+		}
+		customerService.updateCustomer(updateCustomer);
+		return new ResponseEntity<>("Customer data was successfully updated", HttpStatus.OK);
+	}
+	
+}

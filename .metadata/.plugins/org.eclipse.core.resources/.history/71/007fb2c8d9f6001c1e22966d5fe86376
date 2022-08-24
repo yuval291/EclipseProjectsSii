@@ -1,0 +1,47 @@
+package com.example.demo;
+
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.Calendar;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class EntriesAspect {
+	
+	private int counter = 0;
+	
+	@Around("@annotation(Entries))")
+	public Object handleLimition(ProceedingJoinPoint jp)
+	{
+		MethodSignature signature = (MethodSignature) jp.getSignature();
+		Method method = signature.getMethod();
+		if(method!=null)
+		{
+			Entries entriesAnnotation = method.getAnnotation(Entries.class);
+			
+			int requiredRole = entriesAnnotation.entries();
+			
+			if(requiredRole>counter)
+			{
+				try {
+					counter++;
+					return jp.proceed();
+				} catch (Throwable e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+		}
+		throw new Exception("Max executions limit exceeded");
+	}
+
+}

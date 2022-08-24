@@ -1,0 +1,52 @@
+package com.example.project.schedular;
+
+import org.quartz.JobBuilder;
+import org.quartz.JobDetail;
+import org.quartz.Scheduler;
+import org.quartz.SchedulerException;
+import org.quartz.SimpleScheduleBuilder;
+import org.quartz.Trigger;
+import org.quartz.TriggerBuilder;
+import org.quartz.impl.StdSchedulerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class Schedular {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Schedular.class, args);
+		try {
+			JobDetail job = jobDetail();
+            Trigger trigger = trigger(job);
+            Scheduler scheduler = scheduler(trigger,job);
+            
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Bean
+	public static JobDetail jobDetail() {
+	    return JobBuilder.newJob(SystemJob.class).withIdentity("systemjob", "group").build();
+	}
+	
+	@Bean
+	public static Trigger trigger(JobDetail job) {
+	    return  TriggerBuilder.newTrigger().withIdentity("simpleTrigger", "group")
+                .withSchedule(SimpleScheduleBuilder.repeatMinutelyForever()).build();
+	}
+	
+	@Bean
+	public static Scheduler scheduler(Trigger trigger, JobDetail job) 
+	  throws SchedulerException {
+        Scheduler scheduler = new StdSchedulerFactory().getScheduler(); 
+        scheduler.start(); 
+        scheduler.scheduleJob(job, trigger);
+	    return scheduler;
+	}
+	
+	
+
+}

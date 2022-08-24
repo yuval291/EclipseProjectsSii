@@ -1,0 +1,46 @@
+package com.example.demo.service;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Account;
+import com.example.demo.models.Customer;
+import com.example.demo.repository.AccountRepository;
+import com.example.demo.repository.CustomerRepository;
+
+@Service
+public class AccountService {
+
+	@Autowired
+	private AccountRepository accountRepo;
+	
+	@Autowired
+	private CustomerRepository customerRepo;
+	
+	@Transactional
+	public Customer openAccount(Customer newCustomer) {
+		Account account = new Account("363655",8000,2.3);
+		accountRepo.save(account);
+		
+		List<Customer> customers = Arrays.asList(newCustomer);
+		
+		Customer c1 = customerRepo.findById(newCustomer.getId()).get();
+		
+//		account.setCustomers(customers);
+		
+//		c1.setAccountNumber(account);
+//		customerRepo.save(c1);
+//		
+//		accountRepo.save(account);
+		
+		
+		return customerRepo.save(newCustomer);
+	}
+
+}

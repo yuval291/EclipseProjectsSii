@@ -1,0 +1,50 @@
+package com.example.demo.service;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Car;
+import com.example.demo.repository.CarRepository;
+
+@Service
+public class CarService {
+	
+	@Autowired
+	private CarRepository carRepo;
+
+	public List<Car> getAllCar() {
+		return carRepo.findAll();
+	}
+
+	public void addCar(Car c) {
+		carRepo.save(c);
+	}
+
+	public List<Car> addCars(Car...cars) {
+		List<Car> carList = Arrays.asList(cars);
+		return carRepo.saveAll(carList);
+	}
+
+	@Transactional
+	public void deleteCar(Car c) {
+		carRepo.delete(c);
+	}
+	
+	@Transactional
+	public void deleteCars(Car...cars) {
+		List<Car> carList = Arrays.asList(cars);
+		carRepo.deleteAll(carList);
+	}
+
+	@Transactional
+	public void updateCar(Car c) {
+		Car car = carRepo.getReferenceById(c.getCarType());
+		car = c;
+	}
+
+}

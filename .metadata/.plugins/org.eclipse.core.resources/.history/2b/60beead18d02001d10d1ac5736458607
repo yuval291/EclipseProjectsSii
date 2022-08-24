@@ -1,0 +1,55 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.demo.model.Car;
+import com.example.demo.service.CarService;
+
+
+@SpringBootApplication
+public class Yad2Application implements CommandLineRunner{
+	
+	@Autowired
+	private CarService carService;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Yad2Application.class, args);
+	}
+	
+	@Override
+	public void run(String... args) throws Exception {
+		
+		Car c1 = new Car("mazda","ff", 45000, 2007, 4, 45000);
+		Car c2 = new Car("toyota","ff", 80000, 1995, 4, 45000);
+		Car c3 = new Car("bmw","ff", 25000, 2022, 4, 45000);
+		Car c4 = new Car("kia","ff", 100000, 2000, 4, 45000);
+		
+		carService.addCars(c1,c2,c3,c4);
+		
+		carService.deleteCar(c2);
+		
+		c1 = new Car("mazda","dsdsds", 80000, 2007, 4, 60000);
+		carService.updateCar(c1);
+		System.out.println("-----------------------------");
+		List<Car> listprice = carService.searchByPrice(0, 50000);
+		for (Car car : listprice) {
+			System.out.println(car.toString());
+		}
+		System.out.println("-----------------------------");
+		List<Car> listYear = carService.searchByYearOfManufacture(2020, 2023);
+		for (Car car : listYear) {
+			System.out.println(car.toString());
+		}
+		System.out.println("-----------------------------");
+		List<Car> listMileage = carService.searchByMileage(50000);
+		for (Car car : listMileage) {
+			System.out.println(car.toString());
+		}
+	}
+
+}

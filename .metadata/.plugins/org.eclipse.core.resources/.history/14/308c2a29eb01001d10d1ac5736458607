@@ -1,0 +1,26 @@
+package com.example.demo.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name="car")
+public class Car {	
+	private String carType;
+	private String color;
+//	private long Mileage;
+//	private int yearOfManufacture;
+//	private int numberOfPreviousOwners;
+//	private long price;
+	
+	
+}

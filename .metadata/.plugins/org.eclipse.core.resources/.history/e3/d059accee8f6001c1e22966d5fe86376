@@ -1,0 +1,28 @@
+package com.example.demo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+
+public class RestrictionsOnEntriesApplication {
+
+	public static void main(String[] args) throws InterruptedException {
+		ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+		
+		Thread t1 = new Thread() ;
+		Thread t2 = new Thread();
+		Thread t3 = new Thread();
+		
+		t1.start();
+		t2.start();
+		
+		Thread.sleep(10000);
+		
+	}
+	
+	 public void run() {
+		 Test t = context.getBean(Test.class);
+		 t.foo();
+		  }
+
+}

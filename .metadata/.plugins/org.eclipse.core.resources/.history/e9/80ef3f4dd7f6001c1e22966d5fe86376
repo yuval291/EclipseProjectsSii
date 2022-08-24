@@ -1,0 +1,13 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Test {
+
+	public void func(int i) {
+		System.out.println("Running func entry number "+i);	
+	}
+
+	
+}

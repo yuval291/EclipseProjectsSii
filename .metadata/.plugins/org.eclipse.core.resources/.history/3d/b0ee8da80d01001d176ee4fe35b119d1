@@ -1,0 +1,10 @@
+package com.example.demo;
+
+public class Test {
+
+	public void doWork() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

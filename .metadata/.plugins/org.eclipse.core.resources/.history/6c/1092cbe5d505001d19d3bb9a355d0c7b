@@ -1,0 +1,79 @@
+package com.example.demo.models;
+
+import java.util.Objects;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "customer")
+public class Customer {
+	
+    @Id
+    @Column
+    private long id;
+    @Column
+    private String firstName;
+    @Column
+    private String lastName;
+    
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="accountNumber")
+	private Account accountNumber;
+
+	public Customer() {
+		super();
+	}
+
+	public Customer(long id, String firstName, String lastName) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Account getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(Account account) {
+		this.accountNumber = account;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(accountNumber, id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return hashCode() == obj.hashCode();
+	}
+	
+	
+    
+
+}

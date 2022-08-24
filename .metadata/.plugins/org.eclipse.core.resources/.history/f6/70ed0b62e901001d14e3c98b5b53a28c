@@ -1,0 +1,17 @@
+package com.example.demo.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class Car {
+	
+	private String carType;
+	private String color;
+//	private long Mileage;
+//	private int yearOfManufacture;
+//	private int numberOfPreviousOwners;
+//	private long price;
+
+}

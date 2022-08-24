@@ -1,0 +1,48 @@
+package com.example.demo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Account;
+import com.example.demo.models.Customer;
+import com.example.demo.repository.AccountRepository;
+import com.example.demo.repository.CustomerRepository;
+
+@Service
+public class CustomerService {
+
+	 @Autowired
+	 private CustomerRepository customerRepo;
+
+	public Customer addAccount(Customer newAccount) {
+	
+		return customerRepo.save(newAccount);
+	}
+
+	public List<Customer> findAllAccount() {
+	
+		return customerRepo.findAll();
+	}
+
+	public Optional<Account> findById(String idAccount) {
+		return accountRepository.findById(idAccount);
+	}
+
+	public void deleteById(String idAccount) {
+		accountRepository.deleteById(idAccount);
+	}
+
+	@Transactional
+	public void updateAccount(Account updateAccount) {
+		accountRepository.save(updateAccount);
+	}
+	
+	
+	 
+	 
+}

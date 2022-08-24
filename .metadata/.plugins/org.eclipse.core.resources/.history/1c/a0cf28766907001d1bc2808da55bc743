@@ -1,0 +1,87 @@
+package com.example.demo.service;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Account;
+import com.example.demo.models.Customer;
+import com.example.demo.repository.AccountRepo;
+import com.example.demo.repository.CustomerRepo;
+
+import net.bytebuddy.asm.Advice.Return;
+
+
+@Service
+public class AccountService {
+
+	@Autowired
+	private AccountRepo accountRepo;
+	
+	@Autowired
+	private CustomerRepo customerRepo;
+
+	@Transactional
+	public Account openAccount(Customer customer) {
+		boolean flag = true;
+		
+		if(customerRepo.findById(customer.getCustomerId())==null) {
+			return null;
+		}
+		
+		while (flag) {
+			int random = ThreadLocalRandom.current().nextInt(0, 1000000000 + 1);
+			
+			System.out.println(accountRepo.existsById((long)random));
+			
+			if(accountRepo.existsById((long)random) == false) {
+				flag = false;
+				Account account = new Account((long)random);
+				account.setCustomer(customer);
+				return accountRepo.save(account);
+			}
+		}
+		return null;
+	}
+
+
+	public Account limitAccount(long accountNumber, double limit) {
+		if(accountRepo.existsById(accountNumber)) {
+			Account account = accountRepo.findById(accountNumber).get();
+			account.setMinusLimit(limit);
+			return accountRepo.save(account);
+		}
+		return null;
+	}
+
+
+	public Account holdAccount(long accountNumber) {
+		if(accountRepo.existsById(accountNumber)) {
+			Account account = accountRepo.findById(accountNumber).get();
+			account.setActive(false);
+			return accountRepo.save(account);
+		}
+		return null;
+		
+	}
+
+
+	public Account depositToAccount(long accountNumber, double sum) {
+		if(accountRepo.existsById(accountNumber)) {
+			Account account = accountRepo.findById(accountNumber).get();
+			double currSum = account.getCurrentBalance();
+			account.setCurrentBalance(currSum+sum);
+			return accountRepo.save(account);
+		}
+		return null;
+	}
+
+
+	public Account removeFromAccount(long accountNumber, double sum) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,26 @@
+package com.example.demo.models;
+
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "account")
+public class Account {
+
+	@Id
+	@Column
+	private long accountNumber;
+	@Column
+	private double currentBalance;
+	@Column
+	private double minusLimit;
+
+	@OneToMany(mappedBy = "accountNumber")
+	Set<Customer> customers;
+}

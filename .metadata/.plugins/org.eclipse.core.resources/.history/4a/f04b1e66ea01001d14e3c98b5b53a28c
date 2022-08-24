@@ -1,0 +1,26 @@
+package com.example.demo.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+
+@Entity
+
+@Table(name="car")
+public class Car {	
+	private String carType;
+	private String color;
+//	private long Mileage;
+//	private int yearOfManufacture;
+//	private int numberOfPreviousOwners;
+//	private long price;
+	
+	Car(){
+		
+	}
+	
+	Car(String string, String string2) {
+		
+	}
+}

@@ -1,0 +1,39 @@
+package com.example.demo;
+
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class MyAspect {
+	
+	private Map<String, Boolean> Entrances = new HashMap<String, Boolean>();
+
+	@Around("@annotation(MyAnnotation))")
+	public Object func(ProceedingJoinPoint jp) throws Throwable{
+		
+		MethodSignature signature = (MethodSignature) jp.getSignature();
+		Method method = signature.getMethod();
+		
+		if (method != null) {
+			if (!Entrances.containsKey(method.getName())) {
+				Entrances.put(method.getName(), false);
+			}
+			
+			MyAnnotation entriesAnnotation = method.getAnnotation(MyAnnotation.class);
+
+			if (entriesAnnotation.insert()) {
+				ifInsert=false;
+				return jp.proceed();
+			}
+		}
+		throw new Exception("Error entering");
+	}
+}

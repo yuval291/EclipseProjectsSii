@@ -1,0 +1,48 @@
+package com.example.demo.service;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Car;
+import com.example.demo.repository.CarRepository;
+
+@Service
+public class CarService {
+	
+	@Autowired
+	private CarRepository carRepo;
+
+	public List<Car> getAllCar() {
+		return carRepo.findAll();
+	}
+
+	public void addCar(Car c) {
+		carRepo.save(c);
+	}
+
+	public List<Car> addCars(Car...cars) {
+		List<Car> carList = Arrays.asList(cars);
+		return carRepo.saveAll(carList);
+	}
+
+	public void deleteCar(Car c) {
+		carRepo.delete(c);
+	}
+	
+	public void deleteCars(Car...cars) {
+		List<Car> carList = Arrays.asList(cars);
+		carRepo.deleteAll(carList);
+	}
+
+	public void updateCar(Car c1) {
+		carRepo.save(c1);
+	}
+	
+	public List<Car> searchByPrice (int min , int max) {
+		return carRepo.getSumting(int min , int max);
+	}
+
+}

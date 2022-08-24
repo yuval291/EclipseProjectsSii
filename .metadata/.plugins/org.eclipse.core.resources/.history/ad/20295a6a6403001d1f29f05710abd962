@@ -1,0 +1,30 @@
+package com.example.demo.model;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="room")
+public class Room {
+
+	@Id
+	@Column
+	private int roomNumber;
+	@Column
+	private int floor;
+	@Column
+	private Date occupiedSince;
+	@Column
+	private Date occupiedUntil;
+	
+	@ManyToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+	private List<Customer> occupiedBy;
+}
